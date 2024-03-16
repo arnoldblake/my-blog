@@ -1,10 +1,15 @@
 <script>
 	import '../app.pcss';
-	import { AppShell } from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
 </script>
 
 <AppShell>
-	<svelte:fragment slot="header">Header</svelte:fragment>
+	<svelte:fragment slot="header">
+		<AppBar>
+			<svelte:fragment slot="lead">blakearnold.me</svelte:fragment>
+			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
+		</AppBar>
+	</svelte:fragment>
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- / ---- -->

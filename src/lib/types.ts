@@ -14,19 +14,32 @@ export type Post = {
 
 interface ImageModule {
 	default: {
-	  sources: {
+		sources: {
+			avif: string;
+			webp: string;
+			png: string;
+		};
+		img: {
+			src: string;
+			w: number;
+			h: number;
+		};
+	};
+	[Symbol.toStringTag]: 'Module';
+}
+
+export type ImportedImages = Record<string, ImageModule>;
+
+export type EnhancedImage = {
+	sources: {
 		avif: string;
 		webp: string;
 		png: string;
-	  };
-	  img: {
+	};
+	img: {
 		src: string;
 		w: number;
 		h: number;
-	  };
 	};
-	[Symbol.toStringTag]: 'Module';
-  }
-  
-export type ImportedImages = Record<string, ImageModule>;
-  
+};
+
