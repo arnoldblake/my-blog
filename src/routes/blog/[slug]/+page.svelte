@@ -1,7 +1,8 @@
 <script lang="ts">
-	import BlogCard from '$lib/components/BlogCard.svelte';
-
+	import BlogPost from '$lib/components/BlogPost.svelte';
 	export let data;
+
+	console.log(data);
 </script>
 
-<BlogCard {...data.post} />
+<BlogPost {...data.post.metadata} />
