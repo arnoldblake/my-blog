@@ -29,7 +29,7 @@
 	}
 </script>
 
-<a class="bg-initial card card-hover overflow-hidden" href="/blog/{slug}">
+<a class="bg-initial card card-hover mt-10 overflow-hidden" href="/blog/{slug}">
 	<header>
 		<enhanced:img
 			src={enhancedImage}

@@ -21,17 +21,16 @@ const config = {
 	},
 	plugins: [
 		skeleton({
-			themes: { 
-				preset: [ 
+			themes: {
+				preset: [
 					{ name: "skeleton", enhancements: true },
-					{ name:	"crimson", enhancements: true}
-				] 
+					{ name: "crimson", enhancements: true }
+				]
 			}
 		})
 	]
-	
-	
+
+
 } satisfies Config;
 
 export default config;
-						
