@@ -1,8 +1,7 @@
 <script lang="ts">
 	import BlogPost from '$lib/components/BlogPost.svelte';
 	export let data;
-
-	console.log(data);
 </script>
 
-<BlogPost {...data.post.metadata} />
+<!-- TODO: Fix the props for this component -->
+<BlogPost {...data} />

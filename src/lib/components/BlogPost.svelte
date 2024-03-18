@@ -3,17 +3,19 @@
 	import { getImageLink } from '$lib/images';
 	import EnhancedImage from '$lib/components/EnhancedImage.svelte';
 
-	export let title: string;
-	export let categories: string[];
-	export let description: string;
-	export let author: string;
-	export let date: string;
-	export let image: string;
-	export let position: string;
-	export let slug: string;
+	export let metadata;
+	export let content;
+	console.log(content.render);
+	export let image = metadata.image;
+	export let title = metadata.title;
+	export let position = metadata.position;
+	export let categories = metadata.categories;
+	export let description = metadata.description;
+	export let author = metadata.author;
+	export let date = metadata.date;
 </script>
 
-<a class="bg-initial card card-hover mt-10 overflow-hidden" href="/blog/{slug}">
+<div class="bg-initial card card-hover mx-auto my-10 w-3/6 overflow-hidden">
 	<header>
 		<EnhancedImage {image} {title} {position} />
 	</header>
@@ -27,7 +29,9 @@
 		<article>
 			<p>
 				<!-- cspell:disable -->
-				{description}
+
+				<svelte:component this={content} />
+
 				<!-- cspell:enable -->
 			</p>
 		</article>
@@ -40,4 +44,4 @@
 			<small>On {date}</small>
 		</div>
 	</footer>
-</a>
+</div>
